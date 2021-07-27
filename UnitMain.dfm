@@ -1,9 +1,9 @@
-object Form1: TForm1
+object FormMain: TFormMain
   Left = 0
   Top = 0
-  Caption = 'Form1'
-  ClientHeight = 475
-  ClientWidth = 624
+  Caption = 'FormMain'
+  ClientHeight = 523
+  ClientWidth = 701
   Color = clHighlightText
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,8 +18,8 @@ object Form1: TForm1
   object Image1: TImage
     Left = 0
     Top = 89
-    Width = 624
-    Height = 386
+    Width = 701
+    Height = 434
     Align = alClient
     Center = True
     Picture.Data = {
@@ -24604,16 +24604,17 @@ object Form1: TForm1
       FFFF}
     ExplicitLeft = 1
     ExplicitTop = 94
+    ExplicitWidth = 624
+    ExplicitHeight = 386
   end
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 624
+    Width = 701
     Height = 89
     Align = alTop
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 625
     object BitBtn1: TBitBtn
       Left = 97
       Top = 1
@@ -24964,7 +24965,7 @@ object Form1: TForm1
         FFFFFFFFFFFFFFFFFFFF}
       Layout = blGlyphTop
       TabOrder = 0
-      ExplicitLeft = 1
+      OnClick = BitBtn1Click
     end
     object BitBtn2: TBitBtn
       Left = 1
@@ -25316,25 +25317,28 @@ object Form1: TForm1
         FFFFFFFFFFFFFFFFFFFF}
       Layout = blGlyphTop
       TabOrder = 1
-      ExplicitLeft = -5
+      OnClick = BitBtn2Click
     end
   end
   object MainMenu1: TMainMenu
-    Left = 152
-    Top = 65512
+    Left = 264
+    Top = 24
     object Sistema1: TMenuItem
       Caption = 'Sistema'
       object Sair1: TMenuItem
         Caption = 'Sair'
+        OnClick = Sair1Click
       end
     end
     object Cadastro1: TMenuItem
       Caption = 'Cadastro'
       object Pacientes1: TMenuItem
         Caption = 'Pacientes'
+        OnClick = Pacientes1Click
       end
       object Agendamentos1: TMenuItem
         Caption = 'Agendamentos'
+        OnClick = Agendamentos1Click
       end
     end
   end
