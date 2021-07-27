@@ -8,7 +8,7 @@ uses
   Vcl.Buttons;
 
 type
-  TForm1 = class(TForm)
+  TFormMain = class(TForm)
     MainMenu1: TMainMenu;
     Sistema1: TMenuItem;
     Cadastro1: TMenuItem;
@@ -19,6 +19,11 @@ type
     BitBtn1: TBitBtn;
     BitBtn2: TBitBtn;
     Image1: TImage;
+    procedure Sair1Click(Sender: TObject);
+    procedure Pacientes1Click(Sender: TObject);
+    procedure Agendamentos1Click(Sender: TObject);
+    procedure BitBtn2Click(Sender: TObject);
+    procedure BitBtn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -26,10 +31,37 @@ type
   end;
 
 var
-  Form1: TForm1;
+  FormMain: TFormMain;
 
 implementation
 
 {$R *.dfm}
+
+uses UnitCadAgendamento, UnitCad;
+
+procedure TFormMain.Agendamentos1Click(Sender: TObject);
+begin
+UnitCadAgendamento.FormCadAgendamento.ShowModal;
+end;
+
+procedure TFormMain.BitBtn1Click(Sender: TObject);
+begin
+UnitCadAgendamento.FormCadAgendamento.ShowModal;
+end;
+
+procedure TFormMain.BitBtn2Click(Sender: TObject);
+begin
+ UnitCad.FormCad.ShowModal;
+end;
+
+procedure TFormMain.Pacientes1Click(Sender: TObject);
+begin
+ UnitCad.FormCad.ShowModal;
+end;
+
+procedure TFormMain.Sair1Click(Sender: TObject);
+begin
+Application.Terminate;
+end;
 
 end.
