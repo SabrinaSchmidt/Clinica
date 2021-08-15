@@ -39,7 +39,7 @@ object FormCad: TFormCad
       TabOrder = 0
     end
   end
-  object DBEdit1: TDBEdit
+  object DBEditNome: TDBEdit
     Left = 48
     Top = 112
     Width = 257
@@ -48,31 +48,34 @@ object FormCad: TFormCad
     DataSource = DataModule1.DataSource1
     TabOrder = 1
   end
-  object DBEdit3: TDBEdit
+  object DBEditCPF: TDBEdit
     Left = 48
     Top = 168
     Width = 257
     Height = 21
     DataField = 'cpf'
     DataSource = DataModule1.DataSource1
+    MaxLength = 14
     TabOrder = 2
   end
-  object DBEdit4: TDBEdit
+  object DBEditTelefone: TDBEdit
     Left = 48
     Top = 224
     Width = 187
     Height = 21
     DataField = 'celular'
     DataSource = DataModule1.DataSource1
+    MaxLength = 15
     TabOrder = 3
   end
-  object DBEdit5: TDBEdit
+  object DBEditData: TDBEdit
     Left = 48
     Top = 280
     Width = 137
     Height = 21
     DataField = 'data'
     DataSource = DataModule1.DataSource1
+    Enabled = False
     TabOrder = 4
   end
   object DBGrid1: TDBGrid
@@ -81,7 +84,7 @@ object FormCad: TFormCad
     Width = 336
     Height = 289
     DataSource = DataModule1.DataSource1
-    TabOrder = 5
+    TabOrder = 6
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
@@ -95,12 +98,12 @@ object FormCad: TFormCad
         Visible = True
       end>
   end
-  object Edit1: TEdit
+  object EditPesquisa: TEdit
     Left = 328
     Top = 141
     Width = 313
     Height = 21
-    TabOrder = 6
-    OnChange = Edit1Change
+    TabOrder = 5
+    OnChange = EditPesquisaChange
   end
 end

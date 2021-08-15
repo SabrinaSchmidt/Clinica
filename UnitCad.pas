@@ -10,15 +10,15 @@ uses
 type
   TFormCad = class(TForm)
     Panel1: TPanel;
-    DBEdit1: TDBEdit;
-    DBEdit3: TDBEdit;
-    DBEdit4: TDBEdit;
-    DBEdit5: TDBEdit;
+    DBEditNome: TDBEdit;
+    DBEditCPF: TDBEdit;
+    DBEditTelefone: TDBEdit;
+    DBEditData: TDBEdit;
     DBGrid1: TDBGrid;
     DBNavigator1: TDBNavigator;
-    Edit1: TEdit;
+    EditPesquisa: TEdit;
     Label1: TLabel;
-    procedure Edit1Change(Sender: TObject);
+    procedure EditPesquisaChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,9 +34,9 @@ implementation
 
 uses UnitDB;
 
-procedure TFormCad.Edit1Change(Sender: TObject);
+procedure TFormCad.EditPesquisaChange(Sender: TObject);
 begin
-  DataModule1.FDTable1.Locate('nome', Edit1.Text(loPartialKey));
+  DataModule1.FDTable1.Locate('nome', Edit1.Text,[loPartialKey]);
 end;
 
 end.

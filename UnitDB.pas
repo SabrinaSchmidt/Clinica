@@ -28,6 +28,7 @@ type
     FDTable2hora: TStringField;
     FDTable2especialidade: TStringField;
     FDTable2medico: TStringField;
+    procedure FDTable1AfterInsert(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -42,5 +43,10 @@ implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+procedure TDataModule1.FDTable1AfterInsert(DataSet: TDataSet);
+begin
+FDTable1data.Value := Date();
+end;
 
 end.
