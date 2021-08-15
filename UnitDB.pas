@@ -17,6 +17,18 @@ type
     FDTable2: TFDTable;
     DataSource1: TDataSource;
     DataSource2: TDataSource;
+    FDTable1id: TFDAutoIncField;
+    FDTable1cpf: TStringField;
+    FDTable1nome: TStringField;
+    FDTable1celular: TStringField;
+    FDTable1data: TDateField;
+    FDTable2id: TFDAutoIncField;
+    FDTable2id_paciente: TIntegerField;
+    FDTable2data: TDateField;
+    FDTable2hora: TStringField;
+    FDTable2especialidade: TStringField;
+    FDTable2medico: TStringField;
+    procedure FDTable1AfterInsert(DataSet: TDataSet);
   private
     { Private declarations }
   public
@@ -31,5 +43,10 @@ implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+procedure TDataModule1.FDTable1AfterInsert(DataSet: TDataSet);
+begin
+FDTable1data.Value := Date();
+end;
 
 end.
