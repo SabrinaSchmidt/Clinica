@@ -14,6 +14,7 @@ object DataModule1: TDataModule1
   end
   object FDTable1: TFDTable
     Active = True
+    AfterInsert = FDTable1AfterInsert
     IndexFieldNames = 'id'
     Connection = FDConnection1
     UpdateOptions.UpdateTableName = 'paciente'
@@ -24,11 +25,13 @@ object DataModule1: TDataModule1
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object FDTable1cpf: TStringField
       FieldName = 'cpf'
       Origin = 'cpf'
       Required = True
+      EditMask = '###.###.###-##;1;_'
       Size = 50
     end
     object FDTable1nome: TStringField
@@ -41,6 +44,7 @@ object DataModule1: TDataModule1
       AutoGenerateValue = arDefault
       FieldName = 'celular'
       Origin = 'celular'
+      EditMask = '(##) #####-####;1;_'
       Size = 60
     end
     object FDTable1data: TDateField
@@ -60,6 +64,7 @@ object DataModule1: TDataModule1
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object FDTable2id_paciente: TIntegerField
       FieldName = 'id_paciente'
