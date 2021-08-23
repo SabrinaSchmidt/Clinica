@@ -33,7 +33,7 @@ object FormCad: TFormCad
     object DBNavigator1: TDBNavigator
       Left = 200
       Top = 24
-      Width = 240
+      Width = 200
       Height = 25
       DataSource = DataModule1.DataSource1
       TabOrder = 0
