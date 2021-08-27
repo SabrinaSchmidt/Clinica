@@ -36,7 +36,7 @@ uses UnitDB;
 
 procedure TFormCad.EditPesquisaChange(Sender: TObject);
 begin
-  DataModule1.FDTable1.Locate('nome', Edit1.Text,[loPartialKey]);
+  DataModule1.FDTable1.Locate('nome', EditPesquisa.Text,[loPartialKey]);
 end;
 
 end.

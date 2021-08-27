@@ -54,6 +54,7 @@ object DataModule1: TDataModule1
     end
   end
   object FDTable2: TFDTable
+    Active = True
     IndexFieldNames = 'id'
     Connection = FDConnection1
     UpdateOptions.UpdateTableName = 'clinica.agendamento'
@@ -96,7 +97,7 @@ object DataModule1: TDataModule1
     end
   end
   object DataSource1: TDataSource
-    DataSet = FDTable1
+    DataSet = FDTable2
     Left = 544
     Top = 56
   end
