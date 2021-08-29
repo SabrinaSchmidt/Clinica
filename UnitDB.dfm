@@ -13,7 +13,6 @@ object DataModule1: TDataModule1
     Top = 56
   end
   object FDTable1: TFDTable
-    Active = True
     AfterInsert = FDTable1AfterInsert
     IndexFieldNames = 'id'
     Connection = FDConnection1
@@ -25,13 +24,11 @@ object DataModule1: TDataModule1
       FieldName = 'id'
       Origin = 'id'
       ProviderFlags = [pfInWhere, pfInKey]
-      ReadOnly = True
     end
     object FDTable1cpf: TStringField
       FieldName = 'cpf'
       Origin = 'cpf'
       Required = True
-      EditMask = '###.###.###-##;1;_'
       Size = 50
     end
     object FDTable1nome: TStringField
@@ -44,13 +41,12 @@ object DataModule1: TDataModule1
       AutoGenerateValue = arDefault
       FieldName = 'celular'
       Origin = 'celular'
-      EditMask = '(##) #####-####;1;_'
       Size = 60
     end
     object FDTable1data: TDateField
+      AutoGenerateValue = arDefault
       FieldName = 'data'
       Origin = 'data'
-      Required = True
     end
   end
   object FDTable2: TFDTable
@@ -97,7 +93,7 @@ object DataModule1: TDataModule1
     end
   end
   object DataSource1: TDataSource
-    DataSet = FDTable2
+    DataSet = FDTable1
     Left = 544
     Top = 56
   end

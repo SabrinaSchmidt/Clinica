@@ -10,8 +10,19 @@ uses
 type
   TFormCadAgendamento = class(TForm)
     Panel1: TPanel;
-    DBNavigator1: TDBNavigator;
     DBEditNome: TDBEdit;
+    DBComboBox1: TDBComboBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    Edit1: TEdit;
+    Label3: TLabel;
+    Edit2: TEdit;
+    Label4: TLabel;
+    DBComboBox2: TDBComboBox;
+    Label5: TLabel;
+    Label6: TLabel;
+    DBEdit1: TDBEdit;
+    DBNavigator167: TDBNavigator;
   private
     { Private declarations }
   public
