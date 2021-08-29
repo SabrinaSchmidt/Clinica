@@ -55,13 +55,12 @@ object FormCad: TFormCad
     Height = 21
     DataField = 'cpf'
     DataSource = DataModule1.DataSource1
-    MaxLength = 14
     TabOrder = 2
   end
   object DBEditTelefone: TDBEdit
     Left = 48
     Top = 224
-    Width = 187
+    Width = 183
     Height = 21
     DataField = 'celular'
     DataSource = DataModule1.DataSource1
